@@ -24,6 +24,7 @@ header {
 }
 .links {
   list-style: none;
+  z-index: 1;
 }
 .links a {
   text-decoration: none;
@@ -58,6 +59,21 @@ header button {
   width: 250px;
   z-index: -1;
 }
+.page2 .aboutme {
+  padding: 2rem;
+  background-color: #393939;
+}
+.aboutme h2 {
+  color: #cec60d;
+  letter-spacing: 2rem;
+}
+.aboutme p {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  color: whitesmoke;
+  line-height: 2rem;
+}
+
 @media all and (max-width: 600px) {
   body {
     overflow-x: hidden;
@@ -85,7 +101,7 @@ header button {
     text-align: center;
   }
   .links a:hover {
-    color: whitesmoke;
+    color: white;
   }
   .links-active {
     transform: translateX(0%);
