@@ -3,7 +3,7 @@ const burgermenu = () => {
     const dropdownlinks = document.querySelector("#linksid");
     burger.addEventListener('click', () => {
         burger.classList.toggle("fa-times");
-        dropdownlinks.classList.toggle("linkson");
+        dropdownlinks.classList.toggle("links-active");
     })
 }
 burgermenu();
