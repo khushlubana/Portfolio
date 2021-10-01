@@ -13,7 +13,6 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 header {
@@ -116,6 +115,10 @@ header button {
   background-color: #3ca40c;
 }
 @media all and (max-width: 600px) {
+  .wrapper {
+    position: relative;
+    overflow: hidden;
+  }
   .links {
     position: absolute;
     left: 0;
