@@ -65,7 +65,7 @@ header button {
 }
 .aboutme h2 {
   color: #cec60d;
-  letter-spacing: 2rem;
+  letter-spacing: 1rem;
 }
 .aboutme p {
   font-size: 1.2rem;
@@ -73,9 +73,52 @@ header button {
   color: whitesmoke;
   line-height: 2rem;
 }
-
+.skills {
+  padding: 1rem;
+}
+.skills div {
+  display: grid;
+  grid-template-columns: 0.9fr 0.1fr;
+  grid-gap: 1rem;
+  align-items: center;
+}
+.skills div p {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  color: whitesmoke;
+}
+.html p {
+  background-color: #2e8ade;
+}
+.css {
+  margin-top: 1rem;
+}
+.css p {
+  background-color: rgb(238, 0, 127);
+}
+.bootstrap p {
+  background-color: rgba(243, 7, 133, 0.808);
+}
+.javascript {
+  margin-top: 1rem;
+}
+.javascript p {
+  background-color: #15beb4;
+}
+.react p {
+  background-color: #32e7e7;
+}
+.git {
+  margin-top: 1rem;
+}
+.git p {
+  background-color: #3ca40c;
+}
 @media all and (max-width: 600px) {
   body {
+    overflow-x: hidden;
+  }
+  .wrapper {
     overflow-x: hidden;
   }
   .links {
