@@ -1,0 +1,27 @@
+body *{
+    box-sizing: border-box;
+}
+#circleshape{
+    float: right;
+    padding: 2rem ;
+    background-color: pink;
+    border-radius: 50%;
+    z-index: -1;
+    transition: margin-right 0.5s,background-color 0.5s;
+}
+.sidepanel{
+    width: 0px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:#e3f2fd;
+    transition: width 0.5s;
+}
+.sidepanel a{
+    padding: 1rem;
+    width: auto;
+    display: block;
+    text-decoration: none;
+    color:rgba(0,0,0,.9);
+}

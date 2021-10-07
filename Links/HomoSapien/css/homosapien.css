@@ -1,0 +1,10 @@
+#babypics img{
+    height: 300px;
+    object-fit: cover;
+}
+footer img{
+    z-index: -1;
+}
+footer p{
+    bottom:0px;
+}

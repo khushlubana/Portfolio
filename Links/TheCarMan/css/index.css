@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+}
+header{
+    padding: 1rem 1rem;
+    background-color:#282b29;
+}
+.innerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.innerHeader .links a{    
+    padding-right: 0.3rem;
+    border: solid;
+    border-width: 0 0.01rem 0 0;
+    color: #a6d1c9;
+    text-decoration: none;
+}
+.innerHeader .links :last-child{
+    border-style:none;
+}
+.innerHeader .links a:hover{
+    color: #6aeed6;
+}
+.innerHeader .icons img{
+    margin-right: 0.3rem;
+    background-color: #a6d1c9;
+    border-radius:5px;
+    height: 2rem;
+    width: 2rem;    
+}
+.innerHeader .icons img:hover{
+    background-color: #6aeed6;   
+}
+/* hero */
+.hero{
+    background-image: url(../photosSVGs/car5-1000.jpg);
+    height: 90vh;
+    background-size: cover;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+.hero h1{
+    font-size: 2rem;
+}
+.hero p{
+    font-size:1rem;
+    padding-left: 2rem;
+}
+.hero p  strong{
+    font-size: 2rem;
+}
+/* .services */
+.services div{
+    background-color: rgba(241, 177, 93, 0.753);
+    border-radius: 10px;
+    height: auto;
+    padding: 1rem;
+    margin: 5px;
+}
+.services h2{
+    color: #690ce2;
+}
+/* contact us */
+article{
+    background-image: url(../photosSVGs/car4-1000.jpg);
+    background-size: cover;
+}
+.contactus{
+    padding: 1rem;
+}
+.contactus h3{
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    color: #690ce2;
+}
+.contactus p{
+    font-size: 1.5rem;
+}
+form *{
+    background-color: #282b29;
+    color: #6aeed6;
+}
+form ::placeholder{
+    color: #a6d1c9;
+}
+form *:focus{
+    outline: none;
+}
+form :focus::placeholder{
+    color: #6aeed6;
+}
+input[name=firstname] {
+    padding: 1rem;
+    width:50%;
+}
+input[name=lastname] {
+    float: right;
+    padding: 1rem;
+    width:50%;
+}
+input[name=subject] {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+}
+textarea[name=message] {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+}
+input[type=submit]{
+    padding: 1rem;
+    width: 40%;
+    color: #a6d1c9;
+}
+/* footercss */
+footer{
+    background-color: #131A22;
+    margin: 0;
+}
+
+footer p{
+    text-align: center;
+    color: #a6d1c9;
+    padding: 1rem 0;
+    margin: 0;
+}
+@media all and (min-width:992px){
+    header{
+        position: sticky;
+        top: 0;
+    }
+    /* hero */
+    .hero{
+        padding-top: 1rem;
+        padding-left: 1rem;
+        background-position: top -15vh left;
+    }
+    .hero h1{
+        font-size: 4rem;
+    }
+    .hero p{
+        font-size:1.3rem;
+        padding-left: 2rem;
+    }
+    /* Services */
+    .sectionwrapper{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .services{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
+    }
+    .services div{
+        width: 30%;
+        padding: 2rem;
+    }
+    /* CONTACTUS */
+    .contactus{
+        max-width:50%;
+        padding: 4rem;
+    }
+    .contactus h3{
+        font-size: 5rem;
+    }
+}
