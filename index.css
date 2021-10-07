@@ -141,7 +141,7 @@ header button {
 }
 
 .cardnumber.one {
-  background-image: url(/Images/Flexbox/car1.png);
+  background-image: url(Images/Flexbox/car1.png);
   background-size: cover;
 }
 .cardnumber a {
@@ -153,15 +153,15 @@ header button {
   text-align: center;
 }
 .cardnumber.two {
-  background-image: url(/Images/BootStrap/man1.png);
+  background-image: url(Images/BootStrap/man1.png);
   background-size: cover;
 }
 .cardnumber.three {
-  background-image: url(/Images/JS/Screenshot\ 2021-10-07\ 151033.png);
+  background-image: url(Images/JS/Screenshot\ 2021-10-07\ 151033.png);
   background-size: cover;
 }
 .cardnumber.four {
-  background-image: url(/Images/React/Screenshot\ 2021-10-07\ 151150.png);
+  background-image: url(Images/React/Screenshot\ 2021-10-07\ 151150.png);
   background-size: cover;
 }
 @media all and (max-width: 600px) {
