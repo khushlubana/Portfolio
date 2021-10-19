@@ -169,6 +169,9 @@ header button:hover {
   color: rgba(255, 255, 255, 0.774);
   cursor: pointer;
 }
+.linked button:hover {
+  color: white;
+}
 @media all and (max-width: 600px) {
   .wrapper {
     position: relative;
