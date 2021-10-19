@@ -37,6 +37,9 @@ header button {
   color: rgba(255, 255, 255, 0.774);
   cursor: pointer;
 }
+header button:hover {
+  color: white;
+}
 #burger {
   width: 2rem;
   cursor: pointer;
@@ -121,7 +124,7 @@ header button {
   padding: 1rem 2rem;
   background-color: #393939;
   color: #cec60d;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
   text-align: center;
 }
 .cards {
@@ -130,39 +133,41 @@ header button {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 2rem;
 }
-.cardnumber {
+.cardnumber .one {
   height: 300px;
-  border: 5px solid black;
-  box-shadow: 5px 7px #808080bb;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: flex-end;
-  justify-items: center;
-}
-
-.cardnumber.one {
+  border: 2px solid black;
   background-image: url(Images/Flexbox/car1.png);
   background-size: cover;
 }
-.cardnumber a {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  background-color: black;
-  color: rgba(255, 255, 255, 0.774);
-  cursor: pointer;
-  text-align: center;
-}
-.cardnumber.two {
+.cardnumber .two {
+  height: 300px;
+  border: 2px solid black;
   background-image: url(Images/BootStrap/man1.png);
   background-size: cover;
 }
-.cardnumber.three {
+.cardnumber .three {
+  height: 300px;
+  border: 2px solid black;
   background-image: url(Images/JS/Screenshot\ 2021-10-07\ 151033.png);
   background-size: cover;
 }
-.cardnumber.four {
+.cardnumber .four {
+  height: 300px;
+  border: 2px solid black;
   background-image: url(Images/React/Screenshot\ 2021-10-07\ 151150.png);
   background-size: cover;
+}
+.linked {
+  margin-top: 0.3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.linked button {
+  padding: 0.5rem 2rem;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.774);
+  cursor: pointer;
 }
 @media all and (max-width: 600px) {
   .wrapper {
@@ -210,5 +215,65 @@ header button {
   }
   #burger {
     display: none;
+  }
+  .hero {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .imkhush {
+    line-height: 7rem;
+  }
+  .imkhush h4 {
+    font-size: 2rem;
+  }
+  .imkhush h2 {
+    font-size: 3rem;
+  }
+  .hero img {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: 400px;
+    z-index: -1;
+  }
+  .page2 {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .skills {
+    border: 1px solid rgba(128, 128, 128, 0.445);
+  }
+  .projects {
+    padding-top: 1rem;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.5fr 9.5fr;
+  }
+  .projects h2 {
+    text-align: center;
+    line-height: 4rem;
+  }
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 2rem;
+  }
+  .cardnumber .one {
+    height: 400px;
+    opacity: 90%;
+  }
+  .cardnumber .two {
+    height: 400px;
+    opacity: 90%;
+  }
+  .cardnumber .three {
+    height: 400px;
+    opacity: 90%;
+  }
+  .cardnumber .four {
+    height: 400px;
+    opacity: 90%;
   }
 }

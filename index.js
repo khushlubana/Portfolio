@@ -5,5 +5,10 @@ const burgermenu = () => {
         burger.classList.toggle("fa-times");
         dropdownlinks.classList.toggle("links-active");
     })
+    window.addEventListener('scroll', () => {
+                burger.classList.remove("fa-times");
+        dropdownlinks.classList.remove("links-active");
+    })
+    
 }
-burgermenu();
+burgermenu()
