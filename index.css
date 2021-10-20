@@ -212,13 +212,21 @@ header button:hover {
   }
 }
 
-@media all and (max-width: 992px) {
+@media all and (min-width: 600px) and (max-width: 992px) {
+  header {
+    max-width: 1200px;
+    margin: auto;
+  }
   .links {
     display: flex;
     grid-gap: 1rem;
   }
   #burger {
     display: none;
+  }
+  .hero {
+    max-width: 1200px;
+    margin: auto;
   }
   .imkhush {
     line-height: 7rem;
@@ -227,7 +235,7 @@ header button:hover {
     font-size: 2rem;
   }
   .imkhush h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .hero img {
     position: absolute;
@@ -289,8 +297,12 @@ header button:hover {
   #burger {
     display: none;
   }
+  .hero {
+    max-width: 1200px;
+    margin: auto;
+  }
   .imkhush {
-    line-height: 5rem;
+    line-height: 7rem;
   }
   .imkhush h4 {
     font-size: 2rem;
