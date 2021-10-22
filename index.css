@@ -10,6 +10,9 @@
   /* font-family: "EB Garamond", serif; */
   font-family: "Salsa", cursive;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -22,6 +25,10 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+.fa-igloo {
+  text-decoration: none;
+  color: black;
+}
 .links {
   list-style: none;
   z-index: 1;
@@ -30,6 +37,10 @@ header {
   text-decoration: none;
   color: black;
   font-size: 1rem;
+  padding-left: 1rem;
+}
+.links a:hover {
+  text-decoration: underline;
 }
 header button {
   padding: 0.5rem 1rem;
@@ -164,16 +175,20 @@ header button:hover {
 .linked {
   margin-top: 0.3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
 }
-.linked button {
-  padding: 0.5rem 2rem;
+.linked a {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.3rem 2rem;
   background-color: black;
   color: rgba(255, 255, 255, 0.774);
   cursor: pointer;
+  display: grid;
+  align-content: center;
 }
-.linked button:hover {
+.linked a:hover {
   color: white;
 }
 @media all and (max-width: 600px) {
@@ -298,7 +313,7 @@ header button:hover {
     display: none;
   }
   .hero {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
   }
   .imkhush {
