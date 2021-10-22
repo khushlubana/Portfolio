@@ -179,7 +179,6 @@ header button:hover {
   justify-content: space-around;
 }
 .linked a {
-  text-decoration: none;
   border-radius: 5px;
   padding: 0.3rem 2rem;
   background-color: black;
@@ -187,6 +186,7 @@ header button:hover {
   cursor: pointer;
   display: grid;
   align-content: center;
+  text-decoration: none;
 }
 .linked a:hover {
   color: white;
