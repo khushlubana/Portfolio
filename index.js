@@ -9,6 +9,14 @@ const burgermenu = () => {
                 burger.classList.remove("fa-times");
         dropdownlinks.classList.remove("links-active");
     })
-    
+}
+const contactmenu = () => {
+    const contactbutton = document.querySelector("#contactmenubutton");
+    const contactform = document.querySelector(".contactform");
+    contactbutton.addEventListener('click', () => {
+        contactform.classList.toggle("contactform-show");
+        contactbutton.classList.toggle("contactbutton-change");
+    })
 }
 burgermenu()
+contactmenu()
