@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+/* animation */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 * {
   margin: 0;
@@ -17,16 +19,19 @@ body {
   margin: 0;
   padding: 0;
 }
-
 header {
-  min-height: 4rem;
+  position: sticky;
+  top: 0;
   padding: 1rem;
   display: grid;
+  min-height: 4rem;
   grid-template-columns: auto 1fr;
   justify-items: end;
   align-items: center;
+  z-index: 2;
+  background-color: white;
 }
-.fa-igloo {
+.fa-home {
   text-decoration: none;
   color: black;
 }
@@ -42,9 +47,10 @@ header {
   padding-right: 3rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+  position: relative;
 }
+
 /* header button {
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -62,7 +68,7 @@ header button:hover {
 
 .hero {
   position: relative;
-  padding: 4rem 1rem 1rem 2rem;
+  padding: 3rem 2rem;
 }
 .imkhush {
   line-height: 5rem;
@@ -192,9 +198,6 @@ header button:hover {
   align-content: center;
   text-decoration: none;
 }
-.linked a:hover {
-  color: white;
-}
 footer {
   margin-top: 1rem;
   padding: 1rem;
@@ -272,9 +275,6 @@ textarea {
     padding: 1rem 0;
     text-align: center;
   }
-  .links a:hover {
-    color: white;
-  }
   .links-active {
     transform: translateX(0%);
     transition: transform 1s;
@@ -286,6 +286,111 @@ textarea {
     width: 100%;
   }
 }
+@media all and (min-width: 600px) {
+  html {
+    scroll-padding-top: 4rem;
+  }
+  body {
+    max-width: 1200px;
+    margin: auto;
+  }
+  header {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .links {
+    display: flex;
+    grid-gap: 1rem;
+  }
+  .links a {
+    margin-right: 1rem;
+  }
+  .links a::after {
+    content: "";
+    position: absolute;
+    /* right: 0; */
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #cec60d;
+    transition: transform 1s ease;
+  }
+  .links a:hover::after {
+    transform: translateX(800%);
+    width: 10%;
+  }
+  #burger {
+    display: none;
+  }
+  .hero {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .imkhush {
+    line-height: 8rem;
+  }
+  .imkhush h4 {
+    font-size: 7rem;
+  }
+  .imkhush h2 {
+    font-size: 3rem;
+  }
+  .imkhush h2 span:hover {
+    display: inline-block;
+    animation-name: bounce;
+    animation-duration: 1s;
+  }
+  .hero img {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: 450px;
+    z-index: -1;
+    animation: bounce;
+    animation-duration: 1s;
+  }
+  .page2 {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .skills {
+    border: 1px solid rgba(128, 128, 128, 0.445);
+  }
+  .projects {
+    padding-top: 1rem;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.5fr 9.5fr;
+  }
+  .projects h2 {
+    text-align: center;
+    line-height: 4rem;
+  }
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 2rem;
+  }
+  .cardnumber .one {
+    height: 400px;
+    opacity: 90%;
+  }
+  .cardnumber .two {
+    height: 400px;
+    opacity: 90%;
+  }
+  .cardnumber .three {
+    height: 400px;
+    opacity: 90%;
+  }
+  .cardnumber .four {
+    height: 400px;
+    opacity: 90%;
+  }
+}
 
 @media all and (min-width: 600px) and (max-width: 992px) {
   header {
@@ -295,10 +400,6 @@ textarea {
   .links {
     display: flex;
     grid-gap: 1rem;
-  }
-  .links a:hover {
-    background-color: black;
-    color: white;
   }
   #burger {
     display: none;
@@ -362,88 +463,6 @@ textarea {
   }
   .cardnumber .four {
     height: 300px;
-    opacity: 90%;
-  }
-}
-@media all and (min-width: 992px) {
-  body {
-    max-width: 1200px;
-    margin: auto;
-  }
-  header {
-    max-width: 1200px;
-    margin: auto;
-  }
-  .links {
-    display: flex;
-    grid-gap: 1rem;
-  }
-  .links a:hover {
-    background-color: black;
-    color: white;
-  }
-  #burger {
-    display: none;
-  }
-  .hero {
-    max-width: 1200px;
-    margin: auto;
-    margin-bottom: 2rem;
-  }
-  .imkhush {
-    line-height: 8rem;
-  }
-  .imkhush h4 {
-    font-size: 2rem;
-  }
-  .imkhush h2 {
-    font-size: 3rem;
-  }
-  .hero img {
-    position: absolute;
-    top: 1rem;
-    right: 0;
-    width: 450px;
-    z-index: -1;
-  }
-  .page2 {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .skills {
-    border: 1px solid rgba(128, 128, 128, 0.445);
-  }
-  .projects {
-    padding-top: 1rem;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 0.5fr 9.5fr;
-  }
-  .projects h2 {
-    text-align: center;
-    line-height: 4rem;
-  }
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 2rem;
-  }
-  .cardnumber .one {
-    height: 400px;
-    opacity: 90%;
-  }
-  .cardnumber .two {
-    height: 400px;
-    opacity: 90%;
-  }
-  .cardnumber .three {
-    height: 400px;
-    opacity: 90%;
-  }
-  .cardnumber .four {
-    height: 400px;
     opacity: 90%;
   }
 }
