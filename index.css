@@ -1,5 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 /* animation */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
@@ -8,8 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Roboto", sans-serif; */
-  /* font-family: "EB Garamond", serif; */
   font-family: "Salsa", cursive;
 }
 html {
@@ -20,15 +17,12 @@ body {
   padding: 0;
 }
 header {
-  position: sticky;
-  top: 0;
   padding: 1rem;
   display: grid;
-  min-height: 4rem;
   grid-template-columns: auto 1fr;
   justify-items: end;
   align-items: center;
-  z-index: 2;
+  z-index: 10;
   background-color: white;
 }
 .fa-home {
@@ -37,35 +31,21 @@ header {
 }
 .links {
   list-style: none;
-  z-index: 1;
+  z-index: 9;
 }
 .links a {
   letter-spacing: 2px;
   text-decoration: none;
   color: black;
   font-size: 1rem;
-  padding-right: 3rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   padding: 0.3rem 0.7rem;
-  position: relative;
 }
-
-/* header button {
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  background-color: black;
-  color: rgba(255, 255, 255, 0.774);
-  cursor: pointer;
-}
-header button:hover {
-  color: white;
-} */
 #burger {
   width: 2rem;
   cursor: pointer;
 }
-
 .hero {
   position: relative;
   padding: 3rem 2rem;
@@ -76,12 +56,19 @@ header button:hover {
 .imkhush h2 span {
   color: #cec60d;
 }
+.imkhush h2 span:hover {
+  display: inline-block;
+  animation-name: bounce;
+  animation-duration: 1s;
+}
 .hero img {
   position: absolute;
   top: 1rem;
   right: 0;
   width: 250px;
-  z-index: -1;
+  z-index: 8;
+  animation: bounce;
+  animation-duration: 1s;
 }
 .page2 .aboutme {
   padding: 2rem;
@@ -89,7 +76,7 @@ header button:hover {
 }
 .aboutme h2 {
   color: #cec60d;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
 }
 .aboutme p {
   font-size: 1.2rem;
@@ -110,9 +97,6 @@ header button:hover {
   font-size: 1.3rem;
   padding: 0.5rem;
   color: whitesmoke;
-}
-.skills div i {
-  float: right;
 }
 .html p {
   background-color: #2e8ade;
@@ -142,45 +126,28 @@ header button:hover {
   background-color: #3ca40c;
 }
 .projects h2 {
-  padding: 1rem 2rem;
-  background-color: #393939;
-  color: #cec60d;
+  margin: 2rem;
+  font-family: "Roboto", serif;
+  font-weight: bold;
   letter-spacing: 0.5rem;
+  font-size: 2rem;
   text-align: center;
 }
 .cards {
-  padding: 1rem;
+  padding: 0 0.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
 }
-.cardnumber .one {
-  height: 300px;
-  border: 5px solid black;
-  background-image: url(Images/Flexbox/car1.png);
-  background-size: cover;
-  border-radius: 1rem;
+.cards img {
+  width: 100%;
+  border: 1px solid black;
 }
-.cardnumber .two {
-  height: 300px;
-  border: 5px solid black;
-  background-image: url(Images/BootStrap/man1.png);
-  background-size: cover;
-  border-radius: 1rem;
-}
-.cardnumber .three {
-  height: 300px;
-  border: 5px solid black;
-  background-image: url(Images/JS/Screenshot\ 2021-10-07\ 151033.png);
-  background-size: cover;
-  border-radius: 1rem;
-}
-.cardnumber .four {
-  height: 300px;
-  border: 5px solid black;
-  background-image: url(Images/React/Screenshot\ 2021-10-07\ 151150.png);
-  background-size: cover;
-  border-radius: 1rem;
+.cards img:hover {
+  box-shadow: #15beb4;
+  box-shadow: 0.5rem 0.5rem 2rem #393939;
+  transition: box-shadow 0.7s ease;
 }
 .linked {
   margin-top: 0.3rem;
@@ -205,49 +172,6 @@ footer {
   text-align: center;
   color: aliceblue;
 }
-/* contact form */
-/* .formwrapper {
-  position: relative;
-  max-width: 1200px;
-  margin: auto;
-}
-.contactform {
-  border-radius: 5px;
-  position: absolute;
-  right: 1rem;
-  background-color: #cec60d;
-  padding: 1rem;
-  z-index: 2;
-  width: 50%;
-  max-width: 400px;
-  visibility: hidden;
-}
-input {
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-textarea {
-  resize: none;
-  width: 100%;
-  padding: 0.5rem;
-}
-#submitbutton {
-  margin-bottom: 0;
-  border-radius: 5px;
-  border-style: solid;
-}
-#submitbutton:hover {
-  border-color: black;
-}
-.contactform-show {
-  visibility: visible;
-}
-.contactbutton-change {
-  background-color: #cec60d;
-  color: black;
-  border: 2px solid black;
-} */
 @media all and (max-width: 600px) {
   .wrapper {
     position: relative;
@@ -279,12 +203,6 @@ textarea {
     transform: translateX(0%);
     transition: transform 1s;
   }
-  .formwrapper {
-    width: 90%;
-  }
-  .contactform {
-    width: 100%;
-  }
 }
 @media all and (min-width: 600px) {
   html {
@@ -295,25 +213,25 @@ textarea {
     margin: auto;
   }
   header {
-    max-width: 1200px;
-    margin: auto;
+    position: sticky;
+    top: 0;
   }
   .links {
     display: flex;
     grid-gap: 1rem;
   }
   .links a {
+    position: relative;
     margin-right: 1rem;
   }
   .links a::after {
     content: "";
     position: absolute;
-    /* right: 0; */
     bottom: 0;
     left: 0;
-    height: 2px;
-    background: #cec60d;
-    transition: transform 1s ease;
+    height: 4px;
+    background: #cac300;
+    transition: transform 700ms ease;
   }
   .links a:hover::after {
     transform: translateX(800%);
@@ -331,24 +249,13 @@ textarea {
     line-height: 8rem;
   }
   .imkhush h4 {
-    font-size: 7rem;
+    font-size: 2rem;
   }
   .imkhush h2 {
     font-size: 3rem;
   }
-  .imkhush h2 span:hover {
-    display: inline-block;
-    animation-name: bounce;
-    animation-duration: 1s;
-  }
   .hero img {
-    position: absolute;
-    top: 1rem;
-    right: 0;
     width: 450px;
-    z-index: -1;
-    animation: bounce;
-    animation-duration: 1s;
   }
   .page2 {
     max-width: 1200px;
@@ -356,113 +263,27 @@ textarea {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .aboutme h2 {
+    font-size: 2rem;
+  }
   .skills {
-    border: 1px solid rgba(128, 128, 128, 0.445);
+    padding: 0 1rem;
   }
   .projects {
-    padding-top: 1rem;
     max-width: 1200px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 0.5fr 9.5fr;
-  }
-  .projects h2 {
-    text-align: center;
-    line-height: 4rem;
   }
   .cards {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 2rem;
   }
-  .cardnumber .one {
-    height: 400px;
-    opacity: 90%;
-  }
-  .cardnumber .two {
-    height: 400px;
-    opacity: 90%;
-  }
-  .cardnumber .three {
-    height: 400px;
-    opacity: 90%;
-  }
-  .cardnumber .four {
-    height: 400px;
-    opacity: 90%;
-  }
 }
 
 @media all and (min-width: 600px) and (max-width: 992px) {
-  header {
-    max-width: 1200px;
-    margin: auto;
-  }
-  .links {
-    display: flex;
-    grid-gap: 1rem;
-  }
-  #burger {
-    display: none;
-  }
-  .hero {
-    max-width: 1200px;
-    margin: auto;
-    margin-bottom: 2rem;
-  }
-  .imkhush {
-    line-height: 8rem;
-  }
-  .imkhush h4 {
-    font-size: 2rem;
-  }
   .imkhush h2 {
     font-size: 2.5rem;
   }
   .hero img {
-    position: absolute;
-    top: 1rem;
-    right: 0;
     width: 400px;
-    z-index: -1;
-  }
-  .page2 {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .skills {
-    border: 1px solid rgba(128, 128, 128, 0.445);
-  }
-  .projects {
-    padding-top: 1rem;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 0.5fr 9.5fr;
-  }
-  .projects h2 {
-    text-align: center;
-    line-height: 4rem;
-  }
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
-  }
-  .cardnumber .one {
-    height: 300px;
-    opacity: 90%;
-  }
-  .cardnumber .two {
-    height: 300px;
-    opacity: 90%;
-  }
-  .cardnumber .three {
-    height: 300px;
-    opacity: 90%;
-  }
-  .cardnumber .four {
-    height: 300px;
-    opacity: 90%;
   }
 }
